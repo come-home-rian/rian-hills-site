@@ -10,8 +10,8 @@ Status: 🟡 In progress — accounts being set up, build not yet complete
 | Service | What it's for | Cost | Owner login | Notes |
 |---|---|---|---|---|
 | Domain registrar | Owns the site's URL | ~$1–2/mo (~$12–20/yr) | *(fill in once purchased)* | ⚠️ **Unresolved:** she owns `hillsinteriordesign.com` (confirmed via her email `rian@hillsinteriordesign.com`) — unclear if she also owns a neutral umbrella domain like `rianhills.com`. Confirm before pointing DNS anywhere — a business-specific domain name doesn't naturally fit a 5-section umbrella site. Renews: *(date)* |
-| GitHub | Stores the site's code | Free | *(fill in)* | Repo: *(link — not yet pushed anywhere, currently local only at `C:\Users\moria\rian-hills-site`)* |
-| Netlify | Hosts + auto-publishes the site | $9/mo (Personal) | *(fill in)* | Connected to GitHub repo above |
+| GitHub | Stores the site's code | Free | org: `come-home-rian` (billing email `rian.hills@gmail.com`); pushed via Moriah's `moriah0812-star` account | Repo: https://github.com/come-home-rian/rian-hills-site (public) |
+| Netlify | Hosts + auto-publishes the site | $9/mo (Personal) | *(fill in)* | Not yet connected — connect it to the GitHub repo above |
 | Claude Pro | Powers Claude Code — how Rian makes edits | $20/mo | Her own account | Required before handoff is "done" |
 
 **Total: ~$30–31/month**
@@ -72,7 +72,8 @@ No dashboard login required for day-to-day edits — Claude Code is the only too
 - [ ] "The Hills Method" email-capture freebie — discussed as a possible addition, not yet scoped or built
 - [ ] Nektar Network payment processing — explicitly deferred, "way down the road"
 - [ ] Payable-online invoicing for Hills Interior Design — "cool but not a necessity," not built
-- [ ] **No GitHub repo or Netlify site exist yet** — `index.html` currently lives only on this machine at `C:\Users\moria\rian-hills-site`. Nothing is deployed or live.
+- [x] ~~No GitHub repo exists yet~~ — repo created and pushed: https://github.com/come-home-rian/rian-hills-site
+- [ ] **No Netlify site exists yet** — nothing is deployed/live. Next step: connect Netlify to the GitHub repo above (no build command needed, publish directory is repo root).
 - [ ] `index.html` is a self-contained, self-unpacking export from the Claude Design canvas project (~23MB, includes an embedded ~16MB video) — works as a static file with no build step, but that's a large single file for a git repo. Worth moving the video to external hosting (e.g. a CDN or Netlify Large Media) before launch.
 - [ ] The canonical, editable source of this design is the Claude Design canvas project: `https://claude.ai/design/p/f02b789d-595f-4839-bb6e-9641cb5e0514`. This session couldn't authenticate to that MCP (`/design-login` needs an interactive terminal), so `index.html` was reconstructed by unpacking the locally-downloaded bundle export rather than pulling live source. Re-sync from the design project once design-login is available.
 
