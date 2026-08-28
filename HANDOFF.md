@@ -83,7 +83,39 @@ No dashboard login required for day-to-day edits — Claude Code is the only too
 
 ---
 
-## 6. Transfer Checklist (when handing this off to Rian for good)
+## 6. Hyperlink Wiring — page by page
+
+*(Added 2026-08-28, from a full pass through the site's actual routing code.)* The site is a single-page app — all nav (header, footer, hero buttons, every section's primary CTA) already works via internal client-side routing. Across the **entire site** there are only 3 real `<a href>` links: two Google Fonts preconnects and the "Designed by MoOps" footer credit. Everything below has **no click handler at all** — it looks clickable but does nothing.
+
+**Every section page (Interiors / Staging / Network / Shop / Rian)** — same gap repeats 5×: the *secondary* CTA button next to the working primary one is dead.
+
+| Section | Dead secondary CTA | What's needed |
+|---|---|---|
+| Interiors | "View the portfolio" | A portfolio/gallery page (needs photos first), or route to Contact as a stopgap |
+| Staging | "See before + after" | A before/after gallery, or stopgap to Contact |
+| Network | "Explore Nektar Notes" | A written-content page for Nektar Notes, or stopgap to Contact |
+| Shop | "Shop by room" | A shop filter/page, or stopgap to Contact |
+| Rian | "Invite Rian to speak" | Route to Contact with speaking context, or a dedicated speaker one-sheet if she has one |
+
+**Contact page** — all 5 inquiry cards ("Interior project," "Staging a property," "Media or speaking," "Brand partnership," "Something else") have zero click handler. This is the #1 conversion bug on the site — nobody can currently reach Rian through it. **Needed:** a real destination — a form endpoint, an email address, a phone number, or all three. The copy implies inquiries route differently by type ("we'll route it to the right place") — need to know what "the right place" actually is per category, or whether one inbox with different subject lines is fine.
+
+**Shop section** — explicit in the copy itself: *"Amazon and LTK: The buying happens on the storefronts. Links pending, send the two URLs and they go live."* **Needed: Rian's Amazon storefront URL and her LTK (LikeToKnow.it) URL.** Not yet provided as of 2026-08-28 — checked the repo, HANDOFF, and site code, they aren't captured anywhere.
+
+**Network/Nektar section** — "Listen to Rian" currently just navigates internally. Once the podcast is recorded (already an open item above), swap in real Spotify/Apple Podcasts/YouTube links. Not blocking now.
+
+**Social links** — none exist anywhere on the site (no Instagram/Facebook/TikTok, checked). Open question for Rian: does she want social links in the header/footer? If yes, need the handles/URLs.
+
+**Footer/global** — no `mailto:`/`tel:` anywhere. Same root cause as the Contact page gap — one real contact method fixes both.
+
+**Bottom line — what's actually needed from Moriah/Rian:**
+1. A working contact method (form and/or email and/or phone) — biggest single unblock
+2. Amazon + LTK storefront URLs for Shop
+3. Decision: do the 5 dead secondary CTAs get real destination pages later, or route to Contact for now as a stopgap
+4. Yes/no on social links, and handles if yes
+
+---
+
+## 7. Transfer Checklist (when handing this off to Rian for good)
 
 None of this has been done yet — everything currently lives under Moriah's accounts. When it's time to actually hand over ownership:
 
@@ -95,7 +127,7 @@ None of this has been done yet — everything currently lives under Moriah's acc
 
 ---
 
-## 7. Support / Who to Contact
+## 8. Support / Who to Contact
 
 - **Structural/build/technical issues** → Moriah Coleman
 - **SEO / content strategy** → Rian's marketing company
