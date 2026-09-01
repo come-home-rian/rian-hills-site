@@ -79,6 +79,35 @@ need all 33 at once.
 | `v3-rian-b.jpg` | Secondary photo, position B |
 | `v3-rian-c.jpg` | Secondary photo, position C |
 
+## Video
+
+The site currently has one background video (used behind the hero on both
+the homepage and the Interiors page). Video works differently from photos
+under the hood — it gets built directly into the page itself rather than
+linked in, so file size matters a lot more here than it does for a photo.
+
+**If you have a replacement for the existing video:**
+Upload it to `assets/videos/` on GitHub (same Add file → Upload files flow
+as photos) named `hero-video` plus your extension (e.g. `hero-video.mp4`).
+Flag it in [issue #14](https://github.com/come-home-rian/rian-hills-site/issues/14)
+or a new issue so it gets picked up and wired in — dropping the file in
+`assets/videos/` alone won't make it appear on the site automatically,
+same as photos.
+
+**If you want a brand-new video for a page or section that doesn't exist
+yet:** same folder, any clear file name, plus a note (in a GitHub issue is
+easiest) on where you picture it going. There's no fixed slot for it yet,
+so a short description of placement matters more here than for the shot
+list above.
+
+**Size:** keep it under roughly 15–20MB if you can (compressed, 1080p,
+H.264 MP4 is the sweet spot) — the existing video is already close to that
+and is a big chunk of the site's overall weight. GitHub also hard-blocks
+any single file over 100MB, so if your raw footage is larger than that,
+compress it first (or ask and we'll handle the compression from raw
+footage — just say so on the issue rather than uploading something
+GitHub will reject).
+
 ## Not on this list
 
 Logos and award badges are already in the repo (`/assets`) — nothing needed
