@@ -82,17 +82,19 @@ need all 33 at once.
 ## Video
 
 The site currently has one background video (used behind the hero on both
-the homepage and the Interiors page). Video works differently from photos
-under the hood — it gets built directly into the page itself rather than
-linked in, so file size matters a lot more here than it does for a photo.
+the homepage and the Interiors page). It lives at
+`assets/videos/hero-video.mp4` and is linked into the page like a normal
+file (as of 2026-09-03 — it used to be built into the page itself). File
+size still matters for visitors on slow connections, so keep replacements
+as small as they can be while looking good.
 
 **If you have a replacement for the existing video:**
 Upload it to `assets/videos/` on GitHub (same Add file → Upload files flow
-as photos) named `hero-video` plus your extension (e.g. `hero-video.mp4`).
-Flag it in [issue #14](https://github.com/come-home-rian/rian-hills-site/issues/14)
-or a new issue so it gets picked up and wired in — dropping the file in
-`assets/videos/` alone won't make it appear on the site automatically,
-same as photos.
+as photos) named exactly `hero-video.mp4` — replacing that file is all it
+takes; the new video goes live on the next deploy automatically. If your
+replacement is a different format (e.g. `.mov`), flag it in
+[issue #14](https://github.com/come-home-rian/rian-hills-site/issues/14)
+or a new issue so it gets converted and wired in.
 
 **If you want a brand-new video for a page or section that doesn't exist
 yet:** same folder, any clear file name, plus a note (in a GitHub issue is
