@@ -74,6 +74,8 @@ Suggested descriptions (~150 chars, from existing copy):
 
 ## 4. Heading structure
 
+> **✅ Done 2026-09-03 (second pass):** the styled-div headlines are now real heading tags — every route renders exactly one `<h1>` (its section headline: "Come home" on `/`, "Rooms that hold up on an ordinary Tuesday." on `/design`, "Hi, I'm Rian." on `/rian`, etc.) with `<h2>`/`<h3>` structure on home. Markup-only, zero visual change (computed styles verified identical in headless Chromium; the `{{ cur.closer }}` block was deliberately left untouched per HANDOFF's closer-block warning). Like the titles, the headings appear in the *rendered* DOM — full no-JS crawler visibility still arrives with prerendering. The original finding follows.
+
 **Zero `<h1>`–`<h6>` elements in the entire page** (and no `role="heading"` ARIA equivalents). Every headline — "Come home," "Rooms that hold up on an ordinary Tuesday," "Four ways in" — is a styled `<div>` or `<span>`. Visually perfect, structurally invisible: search engines get no topic hierarchy, and screen-reader users get no landmarks to jump between.
 
 Mapping the existing copy onto a proper outline (markup change only — CSS classes keep the look identical):
@@ -155,7 +157,7 @@ Realistic fix path, in order of effort:
 
 ### Post-launch / hand to the marketing company
 - [ ] Watch GSC's Page Indexing + "Crawled – currently not indexed" reports; if rendering fails, escalate the prerender work (§7.3)
-- [ ] Prerender per-route HTML: unique titles/descriptions (§2–3), real heading hierarchy (§4), crawlable `<a href>` navigation
+- [ ] Prerender per-route HTML: unique titles/descriptions in the *served* HTML (§2–3) and crawlable `<a href>` navigation *(the §4 heading hierarchy is already done as of 2026-09-03 — prerendering is what exposes it without JavaScript)*
 - [ ] Add a transcript or episode notes for the podcast video/audio content
 - [ ] Confirm the footer credit link to `moopsanswers.com` is intentional (it's the page's only outbound link)
 
