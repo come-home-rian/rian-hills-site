@@ -1,6 +1,6 @@
 # Photo shot list — Come Home with Rian
 
-This is the full list of real photos the site needs (33 total). Every hero
+This is the full list of real photos the site needs (41 total). Every hero
 image on the live site right now is a placeholder until these are in.
 
 ## How to send them
@@ -78,6 +78,24 @@ need all 33 at once.
 | `v3-rian-a.jpg` | Secondary photo, position A |
 | `v3-rian-b.jpg` | Secondary photo, position B |
 | `v3-rian-c.jpg` | Secondary photo, position C |
+
+## Loved + Supported (Loves) page
+
+These are photos of Rian herself, not product/space photos — pictures of
+her in the shirts, with the dogs, with the business owners, whatever she
+likes. Any photo that shows her connection to the org or business is
+great; a logo alone works too if that's easier for a given spot.
+
+| File name | What it is |
+|---|---|
+| `v3-loves-charity-1.jpg` | Charities card 1 |
+| `v3-loves-charity-2.jpg` | Charities card 2 |
+| `v3-loves-charity-3.jpg` | Charities card 3 |
+| `v3-loves-business-moops.jpg` | MoOps card (the AI phone line business) |
+| `v3-loves-business-1.jpg` | Small businesses card 2 |
+| `v3-loves-business-2.jpg` | Small businesses card 3 |
+| `v3-loves-cause-1.jpg` | Causes close to home card 1 |
+| `v3-loves-cause-2.jpg` | Causes close to home card 2 |
 
 ## Video
 
