@@ -135,15 +135,17 @@ Realistic fix path, in order of effort:
 
 ## Checklist
 
-### Now, while the site is still gated
-- [ ] Replace `<title>Bundled Page</title>` with the real home title (§2)
-- [ ] Add meta description, canonical, `lang="en"`, favicon, and og:/twitter tags to the outer `<head>` (§3)
-- [ ] Set `document.title` per route in the app's `go()` handler (§2)
-- [ ] Give the header logo real alt text (§5)
-- [ ] Add `robots.txt` (allow all + `Sitemap:` line)
-- [ ] Add `sitemap.xml` listing the 7 routes on `https://thenektarnetwork.com`
-- [ ] Decide `hillsinteriordesign.com`'s fate: 301 into `/design` at launch (recommended — transfers its existing index equity) vs. keep as a separate site; either way, stop serving the Showit template copy
-- [ ] Move the embedded video to external hosting (existing HANDOFF item; biggest single page-weight win)
+### Now, while the site is still gated — ✅ completed 2026-09-03 (except the domain decision)
+- [x] Replace `<title>Bundled Page</title>` with the real home title (§2) — *also fixed a latent bug: the unpacker's root swap used to leave the tab title completely blank after load*
+- [x] Add meta description, canonical, `lang="en"`, favicon, and og:/twitter tags — done in **both** the outer (crawler-facing) and inner (post-unpack) `<head>`; favicon is `assets/nektar-bee-t.png`, og:image is `assets/nektar-logo-t.png`
+- [x] Per-route titles — went further than `document.title`: an `applySeo(route)` helper in the routing script updates the title, meta description, **and** canonical on initial load, `go()` navigation, and back/forward (popstate), using the §2–§3 copy
+- [x] Give the header logo real alt text (§5) — now "Come Home with Rian — home"
+- [x] Add `robots.txt` (allow all + `Sitemap:` line)
+- [x] Add `sitemap.xml` listing the 7 routes on `https://thenektarnetwork.com`
+- [ ] Decide `hillsinteriordesign.com`'s fate: 301 into `/design` at launch (recommended — transfers its existing index equity) vs. keep as a separate site; either way, stop serving the Showit template copy — **Rian's call, still open**
+- [x] Move the embedded video out — extracted byte-identical to `assets/videos/hero-video.mp4` and referenced by path; `index.html` shrank from **21.4MB to 1.9MB**. External CDN hosting stays optional.
+
+> **⚠️ Re-export caution:** everything above except `robots.txt`/`sitemap.xml` is a hand-patch to the canvas export — re-exporting `index.html` from the Claude Design project overwrites it all and must be re-applied (see the matching note in HANDOFF.md). Verified 2026-09-03 by rendering the patched bundle in Chromium: full page renders identically to the original, titles/descriptions/canonicals switch correctly across routes, no bundle errors.
 
 ### At launch (when the gate comes off)
 - [ ] Turn off Netlify visitor access control — indexing is impossible until this happens
