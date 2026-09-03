@@ -1,6 +1,6 @@
 # Photo shot list — Come Home with Rian
 
-This is the full list of real photos the site needs (41 total). Every hero
+This is the full list of real photos the site needs (42 total). Every hero
 image on the live site right now is a placeholder until these are in.
 
 ## How to send them
@@ -88,6 +88,7 @@ great; a logo alone works too if that's easier for a given spot.
 
 | File name | What it is |
 |---|---|
+| `v3-loves-hero.jpg` | Big hero background photo at the top of the page — her, the dogs, whatever she likes |
 | `v3-loves-charity-1.jpg` | Charities card 1 |
 | `v3-loves-charity-2.jpg` | Charities card 2 |
 | `v3-loves-charity-3.jpg` | Charities card 3 |
